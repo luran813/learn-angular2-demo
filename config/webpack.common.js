@@ -4,10 +4,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
 
 module.exports = {
+  //入口
   entry: {
     'polyfills': './src/polyfills.ts',
     'vendor': './src/vendor.ts',
-    'app': './src/main.ts'
+    'app': './src/main.ts'   
   },
 
   resolve: {
@@ -21,6 +22,7 @@ module.exports = {
   },
 
   module: {
+    //加载器
     loaders: [
       {
         test: /\.ts$/,
@@ -55,7 +57,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: ['app', 'vendor', 'polyfills']
     }),
-
+    //自动为我们注入那些 script 和 link 标签。
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     })

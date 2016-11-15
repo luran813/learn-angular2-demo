@@ -8,7 +8,7 @@ const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 module.exports = webpackMerge(commonConfig, {
   devtool: 'source-map',
-
+  //输出
   output: {
     path: helpers.root('dist'),
     publicPath: '/',

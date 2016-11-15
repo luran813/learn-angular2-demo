@@ -7,10 +7,10 @@ export class HeroService {
 
   getHeroes(): Promise<Hero[]>{
     let heroes = [ 
-      new Hero(1,'aaa'),
-      new Hero(2,'rhhtft'),
-      new Hero(3,'jgkkh'),
-      new Hero(4,'ryrth')
+      new Hero(1,'Afdmadsdsdf'),
+      new Hero(2,'Gsdmclsmsld'),
+      new Hero(3,'KsoraonMsdos'),
+      new Hero(4,'Tdjkddlscn')
     ];
     
     return Promise.resolve(heroes);
@@ -18,5 +18,9 @@ export class HeroService {
 
   getHero(id: number): Promise<Hero> {
     return this.getHeroes().then(heroes => heroes.find(hero => hero.id === id));
+  }
+
+  updateHero(hero: Hero): Promise<Hero> {
+    return Promise.resolve(hero);
   }
 }
