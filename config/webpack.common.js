@@ -11,7 +11,13 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.ts']
+    extensions: ['', '.js', '.ts'],
+    root: [
+      helpers.root('app'),
+      helpers.root('src'),
+      helpers.root('node_modules'),
+      helpers.root('bower_components')
+    ]
   },
 
   module: {
@@ -30,6 +36,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        include: [
+          helpers.root('node_modules'),
+          helpers.root('bower_components')
+        ],
         exclude: helpers.root('src', 'app'),
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
       },
