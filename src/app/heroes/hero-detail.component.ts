@@ -2,8 +2,6 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params }   from '@angular/router';
 import { Location }                 from '@angular/common';
 
-require('bootstrap/dist/css/bootstrap.min.css');
-
 import { Hero }    from './hero.model';
 import { HeroService } from './hero.service';
 
