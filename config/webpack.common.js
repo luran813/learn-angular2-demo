@@ -38,10 +38,6 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: [
-          helpers.root('node_modules'),
-          helpers.root('bower_components')
-        ],
         exclude: helpers.root('src', 'app'),
         loader: ExtractTextPlugin.extract('style', 'css?sourceMap')
       },
